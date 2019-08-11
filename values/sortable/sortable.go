@@ -1,4 +1,4 @@
-package values
+package SortableValues
 
 type Sortable interface {
 	Value() interface{}

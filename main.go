@@ -1,19 +1,19 @@
 package main
 
 import (
-	"./values"
-	"./containers"
+	"github.com/tmck-code/go-sortable/values/sortable"
+	"github.com/tmck-code/go-sortable/containers/sortable"
 	"fmt"
 )
 
 func main() {
-	i := values.Int{Val: 4}
+	i := SortableValues.Int{Val: 4}
 	fmt.Printf("%+v\n", i)
 
-	s := new(containers.SortableList)
+	s := new(SortableContainers.SortableList)
 
-	s.Add(values.Float{Fval: 2})
-	s.Add(values.Int{Val: 1})
+	s.Add(SortableValues.Float{Fval: 2})
+	s.Add(SortableValues.Int{Val: 1})
 	fmt.Printf("%+v\n", s)
 
 	s.Sort()

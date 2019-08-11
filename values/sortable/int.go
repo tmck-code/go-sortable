@@ -1,4 +1,4 @@
-package values
+package SortableValues
 
 type Int struct {
 	Val int

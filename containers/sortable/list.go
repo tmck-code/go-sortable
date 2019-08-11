@@ -1,9 +1,9 @@
-package containers
+package SortableContainers
 
-import "../values"
+import "github.com/tmck-code/go-sortable/values/sortable"
 
 type SortableList struct {
-	items []values.Sortable
+	items []SortableValues.Sortable
 	size  int
 }
 
@@ -18,7 +18,7 @@ func (l *SortableList) Sort() {
     }
 }
 
-func (l *SortableList) Add(el values.Sortable) {
+func (l *SortableList) Add(el SortableValues.Sortable) {
 	l.items = append(l.items, el)
 	l.size += 1
 }

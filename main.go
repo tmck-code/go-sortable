@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/tmck-code/go-sortable/values/sortable"
-	"github.com/tmck-code/go-sortable/containers/sortable"
 	"fmt"
+	"github.com/tmck-code/go-sortable/containers/sortable"
+	"github.com/tmck-code/go-sortable/values/generic"
+	"github.com/tmck-code/go-sortable/values/sortable"
 )
 
 func main() {
@@ -18,4 +19,7 @@ func main() {
 
 	s.Sort()
 	fmt.Printf("%+v\n", s)
+
+	gi := GenericValues.Int{Val: 1}
+	fmt.Printf("%+v\n", gi)
 }

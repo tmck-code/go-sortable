@@ -1,7 +1,6 @@
 package GenericContainers
 
-type GenericContainer interface {
+type ReversibleContainer interface {
 	Add()
 	Reverse()
 }
-

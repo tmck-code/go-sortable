@@ -13,5 +13,8 @@ func (l *ReversibleList) Add(el GenericValues.GenericValue) {
 }
 
 func (l *ReversibleList) Reverse() {
-	l.items = l.items
+	for i := len(l.items)/2-1; i >= 0; i-- {
+		opp := len(l.items)-1-i
+		l.items[i], l.items[opp] = l.items[opp], l.items[i]
+	}
 }

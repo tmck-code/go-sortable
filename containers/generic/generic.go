@@ -1,7 +1,7 @@
-package containers
+package GenericContainers
 
-type SortableContainer interface {
-	Sort()
+type GenericContainer interface {
 	Add()
+	Reverse()
 }
 

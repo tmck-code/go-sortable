@@ -23,19 +23,19 @@ type Custom struct {
 
 func main() {
 	sl := new(GenericContainers.ReversibleList)
+
 	sl.Add(GenericValues.Int{Val: 1})
 	sl.Add(GenericValues.Int{Val: 100})
-
-	c := Custom{
+	sl.Add(Custom{
 		mapping: CustomMap{
 			name: "my thing",
 			hash: "obj hash",
 			mapping: map[string]string{"key": "val"},
 		},
 		id: 123,
-	}
-	sl.Add(c)
+	})
 	fmt.Printf("original: %+v\n", sl)
+
 	sl.Reverse()
 	fmt.Printf("reversed: %+v\n", sl)
 }

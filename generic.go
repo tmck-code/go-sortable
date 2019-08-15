@@ -10,7 +10,7 @@ func main() {
 	// Create a new "generic" container. It doesn't care what you store in it.
 	sl := new(Container.ReversibleList)
 
-	// Add some "generic" values from this lib
+	// Add some provided "generic" values from this lib
 	sl.Add(Value.GenericInt{Val: 1})
 	sl.Add(Value.GenericInt{Val: 100})
 

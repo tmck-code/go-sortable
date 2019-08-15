@@ -2,9 +2,19 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"github.com/tmck-code/go-sortable/containers"
 	"github.com/tmck-code/go-sortable/values"
 )
+
+type SortableString struct {
+	Sval string
+}
+
+func (s SortableString) Value() interface{} {
+	i, _ := strconv.Atoi(s.Sval)
+	return i
+}
 
 func main() {
 	// Create a new "sortable" container
@@ -16,6 +26,8 @@ func main() {
 	// Add our "sortable" values to the container
 	s.Add(Value.SortableFloat{Fval: 2})
 	s.Add(Value.SortableInt{Val: 1})
+	s.Add(SortableString{Sval: "s"})
+	s.Add(SortableString{Sval: "a"})
 	// Check that everything was added to the container
 	fmt.Printf("original: %+v\n", s)
 

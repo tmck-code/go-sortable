@@ -1,13 +1,18 @@
-package GenericContainers
+package Container
 
-import "github.com/tmck-code/go-sortable/values/generic"
+import "github.com/tmck-code/go-sortable/values"
+
+type Reversible interface {
+	Add()
+	Reverse()
+}
 
 type ReversibleList struct {
 	size  int
 	items []interface{}
 }
 
-func (l *ReversibleList) Add(el GenericValues.GenericValue) {
+func (l *ReversibleList) Add(el Value.Generic) {
 	l.items = append(l.items, el)
 	l.size += 1
 }

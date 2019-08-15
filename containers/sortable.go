@@ -1,6 +1,11 @@
-package SortableContainers
+package Container
 
 import "github.com/tmck-code/go-sortable/values"
+
+type Sortable interface {
+	Sort()
+	Add()
+}
 
 type SortableList struct {
 	items []Value.Sortable

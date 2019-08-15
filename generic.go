@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/tmck-code/go-sortable/containers/generic"
-	"github.com/tmck-code/go-sortable/values/generic"
+	"github.com/tmck-code/go-sortable/containers"
+	"github.com/tmck-code/go-sortable/values"
 )
 
 // Let's define our own custom struct that we want to use
@@ -15,11 +15,11 @@ type CustomMap struct {
 
 func main() {
 	// Create a new "generic" container. It doesn't care what you store in it.
-	sl := new(GenericContainers.ReversibleList)
+	sl := new(Container.ReversibleList)
 
 	// Add some "generic" values from this lib
-	sl.Add(GenericValues.Int{Val: 1})
-	sl.Add(GenericValues.Int{Val: 100})
+	sl.Add(Value.GenericInt{Val: 1})
+	sl.Add(Value.GenericInt{Val: 100})
 
 	// Add our own custom struct
 	sl.Add(CustomMap{

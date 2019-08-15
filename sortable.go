@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/tmck-code/go-sortable/containers/sortable"
+	"github.com/tmck-code/go-sortable/containers"
 	"github.com/tmck-code/go-sortable/values"
 )
 
@@ -11,7 +11,7 @@ func main() {
 	// Objects only need to implement the Value() and Compare() methods,
 	// in order to provide a sortable value to the container
 	// This method works with things like sets - could define Hash()
-	s := new(SortableContainers.SortableList)
+	s := new(Container.SortableList)
 
 	// Add our "sortable" values to the container
 	s.Add(Value.SortableFloat{Fval: 2})

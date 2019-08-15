@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/tmck-code/go-sortable/containers/sortable"
-	"github.com/tmck-code/go-sortable/values/sortable"
+	"github.com/tmck-code/go-sortable/values"
 )
 
 func main() {
@@ -14,8 +14,8 @@ func main() {
 	s := new(SortableContainers.SortableList)
 
 	// Add our "sortable" values to the container
-	s.Add(SortableValues.Float{Fval: 2})
-	s.Add(SortableValues.Int{Val: 1})
+	s.Add(Value.SortableFloat{Fval: 2})
+	s.Add(Value.SortableInt{Val: 1})
 	// Check that everything was added to the container
 	fmt.Printf("original: %+v\n", s)
 

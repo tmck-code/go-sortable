@@ -1,16 +1,16 @@
 package SortableContainers
 
-import "github.com/tmck-code/go-sortable/values/sortable"
+import "github.com/tmck-code/go-sortable/values"
 
 type SortableList struct {
-	items []SortableValues.Sortable
+	items []Value.Sortable
 	size  int
 }
 
 func (l *SortableList) Sort() {
 	for i, value := range(l.items) {
         j := i - 1
-        for j >= 0 && l.items[j].Compare(value) == 1 {
+        for j >= 0 && Value.Compare(l.items[j], value) == 1 {
             l.items[j+1] = l.items[j]
             j = j - 1
         }
@@ -18,7 +18,7 @@ func (l *SortableList) Sort() {
     }
 }
 
-func (l *SortableList) Add(el SortableValues.Sortable) {
+func (l *SortableList) Add(el Value.Sortable) {
 	l.items = append(l.items, el)
 	l.size += 1
 }

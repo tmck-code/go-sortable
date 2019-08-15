@@ -8,22 +8,22 @@ type Sortable interface {
 }
 
 type SortableList struct {
-	items []Value.Sortable
+	Items []Value.Sortable
 	size  int
 }
 
 func (l *SortableList) Sort() {
-	for i, value := range(l.items) {
+	for i, value := range(l.Items) {
         j := i - 1
-        for j >= 0 && Value.Compare(l.items[j], value) == 1 {
-            l.items[j+1] = l.items[j]
+        for j >= 0 && Value.Compare(l.Items[j], value) == 1 {
+            l.Items[j+1] = l.Items[j]
             j = j - 1
         }
-        l.items[j+1] = value
+        l.Items[j+1] = value
     }
 }
 
 func (l *SortableList) Add(el Value.Sortable) {
-	l.items = append(l.items, el)
+	l.Items = append(l.Items, el)
 	l.size += 1
 }

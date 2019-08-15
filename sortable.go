@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"github.com/tmck-code/go-sortable/containers"
 	"github.com/tmck-code/go-sortable/values"
 )
@@ -12,8 +11,11 @@ type SortableString struct {
 }
 
 func (s SortableString) Value() interface{} {
-	i, _ := strconv.Atoi(s.Sval)
-	return i
+	total := 0
+	for _, char := range(s.Sval) {
+		total += int(char)
+	}
+	return total
 }
 
 func main() {
